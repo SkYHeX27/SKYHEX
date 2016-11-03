@@ -1,7 +1,25 @@
-{{ var|default('var is not defined') }}
-
-{{ var.foo|default('foo item on var is not defined') }}
-
-{{ var['foo']|default('foo item on var is not defined') }}
-
-{{ ''|default('passed var is empty')  }}
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ page.title }}</title>
+    <meta name="keywords" content="{{ page.keywords }}" />
+    <meta name="description" content="{{ page.description }}" />
+    <meta http-equiv="content-language" content="{{ page.seoLang }}" />
+  
+    {% if site.favicon %}
+    <link rel="icon" href="{{ site.favicon['favicon'] }}" type="image/x-icon" />
+    <link rel="SHORTCUT ICON" href="{{ site.favicon['thumbnail'] }}?v={{ 'now'|date('U') }}" type="image/x-icon" />
+    {% endif %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  
+    {% include basekit.headScript %}
+  </head>
+  <body class="{{ page.backgroundClass }}">
+  
+    {{zone()|raw}}
+  
+    {% include basekit.bodyScript %}
+  </body>
+</html>
