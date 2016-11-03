@@ -1,24 +1,9 @@
 {
       "name": "SkyHex",
-      "version": "0.0.1",
+      "version": "1.0.0",
       "author": "KennMark",
       "license": "Apache-2.0",
       "summary": "A portfolio",
       "source": "https://github.com/SkyHex27/SKYHEX",
       "tags": ["web developer", "web programmer", "System creator", "Graphic artist","programmer", "web", "developer","photoshop artist", "after effects artist", "video editor,"],
-      "operatingsystem_support": [
-        {
-        "operatingsystem":"RedHat",
-        "operatingsystemrelease":[ "5.0", "6.0" ]
-        },
-        {
-        "operatingsystem": "Ubuntu",
-        "operatingsystemrelease": [ "12.04", "10.04" ]
-        }
-       ],
-      "dependencies": [
-        { "name": "puppetlabs/stdlib", "version_requirement": ">= 3.2.0 < 5.0.0" },
-        { "name": "puppetlabs/firewall", "version_requirement": ">= 0.0.4 < 2.0.0" }
-      ],
-      "data_provider": "hiera"
     }
